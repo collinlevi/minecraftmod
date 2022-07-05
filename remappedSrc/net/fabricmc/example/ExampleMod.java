@@ -1,19 +1,14 @@
-package theshark2109.llamas.muds;
+package net.fabricmc.example;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LlamasMuds implements ModInitializer {
+public class ExampleMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("llamas");
-	public static final Item MUD_BALL = new Item(new Item.Settings().group(ItemGroup.MISC));
+	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
 	@Override
 	public void onInitialize() {
@@ -22,6 +17,5 @@ public class LlamasMuds implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
-		Registry.register(Registry.ITEM, new Identifier("llamasmuds", "mud_ball"), MUD_BALL);
 	}
 }
